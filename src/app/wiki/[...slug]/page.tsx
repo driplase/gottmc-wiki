@@ -8,7 +8,7 @@ export default async function Page({
   params: Promise<{ slug: string[] }>
 }) {
   const { slug } = await params;
-  const pathname = slug.join('/');
+  const pathname = decodeURIComponent(slug.join('/'));
   const rawPost = await getPostBySlug(pathname);
 
   async function getPostBySlug(slug: string) {
