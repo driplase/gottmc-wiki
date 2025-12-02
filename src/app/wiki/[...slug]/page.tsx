@@ -1,6 +1,7 @@
 import { notFound, redirect } from "next/navigation";
 import SetPageTitle from "@/components/SetPageTitle";
 import Link from "next/link";
+import Image from "next/image";
 
 export default async function Page({
   params,

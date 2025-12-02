@@ -14,6 +14,10 @@
 
   --page-article-background: #fffef8;
   --page-article-border: #dfded6a1;
+
+  --table-border: #aaa;
+  --table-th: #eee;
+  --table-td: #fff;
 }
 
 /* ダークモード用 */
@@ -48,37 +52,69 @@ h1 {
   margin-bottom: 1.2rem;
   border-bottom: 1px solid gray;
 }
+
 h2 {
   font-size: 1.5em;
   font-weight: 500;
   margin-top: 1rem;
   border-bottom: 1px solid gray;
 }
+
 h3 {
   font-size: 1.2em;
   font-weight: 500;
   margin: .8rem 0 .64rem 0;
 }
+
 h4, h5, h6 {
   font-weight: 500;
   margin: .45rem 0;
 }
+
 p {
   margin: .48rem 0;
 }
+
 li {
   margin: .32rem 0;
 }
+
 ul {
   list-style: square;
   margin: .64rem 0 0 1.6rem;
+  column-width: 16rem;
 }
+
 a {
   color: #4d68ff;
 
-  &:hover {
+  &:hover:not(.hover\:no-underline) {
     text-decoration: underline;
   }
+}
+
+td, th, table {
+  border: 1px solid var(--table-border);
+}
+
+td, th {
+  padding: .32rem .48rem;
+}
+
+td {
+  background: var(--table-td);
+}
+
+th {
+  background: var(--table-th);
+}
+
+table {
+  margin-top: 1rem;
+}
+
+.horizontal-list li {
+  display: inline-block;
 }
 
 .layout-header {

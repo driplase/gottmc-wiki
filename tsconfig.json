@@ -19,10 +19,11 @@
       }
     ],
     "paths": {
-      "@/*": ["./*"],
-      "@/content/*": ["../content/*"],
+      "@/*": ["./src/*"],
+      "@/content/*": ["content/*"],
+      "@/public/*": ["public/*"],
     },
-    "baseUrl": "src/"
+    "baseUrl": "/"
   },
   "include": [
     "next-env.d.ts",
