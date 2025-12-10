@@ -4,17 +4,20 @@ url: "ロングショット"
 ---
 
 import MessageBox from "@/components/MessageBox"
-
-<MessageBox color="orange">
-  この記事は書きかけです。\
-  あなたが[内容を拡充](https://github.com/driplase/gottmc-wiki/edit/master/content/ロングショット.mdx)してみませんか？
-</MessageBox>
+import InformationBox, { InformationContent, InformationImageArea } from '@/components/InformationBox';
 
 **ロングショット**（英：Long Shot）は、弓矢の初速を二倍にするエンチャントである。
 
 ## 入手方法
-カスタムエンチャントの建物で
-![カスタムエンチャントの建物](/files/Custom_Enchanting.png)
+<InformationBox>
+  <img
+    src="/files/Custom_Enchanting.png" 
+    alt=""
+  />
+  特殊エンチャント台のある建物。
+</InformationBox>
+
+特殊エンチャント台を使って、48 [EXポイント](/wiki/EXポイント)で入手することができる。
 
 ## 技術的情報
 ### ID
@@ -23,5 +26,5 @@ import MessageBox from "@/components/MessageBox"
 | ロングショット | `custom_enchantments:lbow` | `enchantment.custom_enchantments.lbow` |
 
 ## トリビア
-- マイクラの弓矢の攻撃力は速度と攻撃力の積で求められるため攻撃力が上がるが、バランス調整のため攻撃力を2分の1倍にすることで通常とほぼ同じダメージにしている。
-- しかし、同じ距離なら減速の関係でダメージが若干高い。最大のダメージは同一。
+- マイクラの弓矢の攻撃力は速度と攻撃力の積で求められるため攻撃力が上がるが、バランス調整のため攻撃力を2分の1倍にすることで通常とほぼ同じダメージにしている。\
+  しかし、同じ距離なら減速の関係でダメージが若干高い。最大のダメージは同一。

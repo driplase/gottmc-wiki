@@ -4,17 +4,20 @@ url: "帰還"
 ---
 
 import MessageBox from "@/components/MessageBox"
+import InformationBox, { InformationContent, InformationImageArea } from '@/components/InformationBox';
 
-<MessageBox color="orange">
-  この記事は書きかけです。\
-  あなたが[内容を拡充](https://github.com/driplase/gottmc-wiki/edit/master/content/帰還.mdx)してみませんか？
-</MessageBox>
-
-**帰還**（英：Returning）は、mobに当たらなかった矢が着弾地点ではなく発射地点にワープするエンチャントである。
+**帰還**（英：Returning）は、Mobに当たらなかった矢が着弾地点ではなく発射地点にワープするエンチャントである。
 
 ## 入手方法
-カスタムエンチャントの建物で
-![カスタムエンチャントの建物](/files/Custom_Enchanting.png)
+<InformationBox>
+  <img
+    src="/files/Custom_Enchanting.png" 
+    alt=""
+  />
+  特殊エンチャント台のある建物。
+</InformationBox>
+
+特殊エンチャント台を使って、20 [EXポイント](/wiki/EXポイント)で入手することができる。
 
 ## 技術的情報
 ### ID
@@ -23,5 +26,5 @@ import MessageBox from "@/components/MessageBox"
 | 帰還 | `ref` | `enchantment.custom_enchantments.ref` |
 
 ## トリビア
-- 初期案では反射する矢になる予定だったが、実装に失敗したのでこのような形になった。
-- そのためコマンドの内部的には`ref`(reflectionの略)と呼ばれている。
+- 初期案では反射する矢になる予定だったが、実装に失敗したのでこのような形になった。\
+  そのためコマンドの内部的には`ref`(reflectionの略)と呼ばれている。
