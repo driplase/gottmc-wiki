@@ -147,6 +147,10 @@ table {
   display: inline-block;
 }
 
+.link-not-found {
+  color: rgb(194, 29, 29);
+}
+
 .layout-header {
   @apply grid grid-cols-12 text-lg;
   font-size: 1.25rem;

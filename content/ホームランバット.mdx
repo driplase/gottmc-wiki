@@ -1,0 +1,62 @@
+---
+title: "ホームランバット"
+url: "ホームランバット"
+---
+
+import InformationBox, { InformationContent, InformationImageArea } from '@/components/InformationBox';
+import PixelImage from '@/components/PixelImage';
+
+<InformationBox title="ホームランバット">
+  <InformationContent>
+    <InformationImageArea>
+      <PixelImage
+        src="/files/Homerun_Bat.png" 
+        alt="ホームランバット"
+        className="information-box-image"
+      />
+    </InformationImageArea>
+  </InformationContent>
+</InformationBox>
+
+**ホームランバット**は、Mobを数十ブロック飛ばすアイテムである。ノックバック Xのエンチャントがついている。
+
+## 入手
+[望都湊駅](/wiki/望都湊駅)付近にいる村人と、[魔法のかけら](/wiki/魔法のかけら)1つと棒1本で取引できる。
+
+## 用途
+このアイテムを使ってMobを攻撃すると、数十ブロックほどの距離まで飛ばすことができる。
+
+## 技術的情報
+### ベースアイテム
+| 名称 | [リソース位置](https://ja.mc.wiki/w/リソース位置) |
+| ---- | ---- |
+| 棒 | `stick` |
+### コンポーネント
+<details>
+  <summary>JSON</summary>
+```js
+{
+  id: "minecraft:stick",
+  count: 1,
+  components: {
+    "minecraft:lore": [
+      {
+        italic: 0b,
+        text: "よーくぶっ飛ぶ。"
+      }
+    ],
+    "minecraft:custom_name": {
+      italic: 0b,
+      text: "ホームランバット",
+      color: "gold"
+    },
+    "minecraft:enchantments": {
+      "minecraft:knockback": 10
+    },
+    "minecraft:custom_model_data": {
+      floats: [1.0f]
+    }
+  }
+}
+```
+</details>

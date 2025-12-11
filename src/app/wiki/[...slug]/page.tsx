@@ -1,6 +1,6 @@
 import { notFound, redirect } from "next/navigation";
 import SetPageTitle from "@/components/SetPageTitle";
-import Link from "next/link";
+import Link, { LinkProps } from "next/link";
 import Image from "next/image";
 
 export default async function Page({
@@ -45,7 +45,19 @@ export default async function Page({
   }
 
   const overrideComponents = {
-    a: Link,
+    a: async (props: LinkProps) => {
+      const urlString = decodeURIComponent(props.href.toString());
+
+      if (urlString.startsWith('/wiki/')) {
+        try {
+          await import(`@/content/${urlString.replace(/^\/wiki\//, '').toLowerCase()}.mdx`);
+        } catch {
+          return <Link className="link-not-found" {...props} />;
+        }
+      }
+
+      return <Link {...props} />;
+    },
   }
 
   return (
