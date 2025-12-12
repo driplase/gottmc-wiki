@@ -18,7 +18,7 @@
     "@opennextjs/cloudflare": "^1.14.4",
     "@tabler/icons-react": "^3.35.0",
     "@types/mdx": "^2.0.13",
-    "next": "16.0.7",
+    "next": "16.0.10",
     "react": "19.2.0",
     "react-dom": "19.2.0",
     "rehype-autolink-headings": "^7.1.0",

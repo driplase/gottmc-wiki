@@ -103,16 +103,21 @@ p {
 }
 
 li {
-  margin: .32rem 0;
+  margin-bottom: .32rem;
 }
 
 ul {
   list-style: square;
-  margin: .64rem 0 0 1.6rem;
+  margin: .8rem 0 0 1.6rem;
 }
 
 .column-list {
   column-width: 16rem;
+  margin-top: .64rem;
+
+  & > ul {
+    margin-top: 0;
+  }
 }
 
 a {

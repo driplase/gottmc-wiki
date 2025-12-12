@@ -51,7 +51,7 @@ export default async function Page({
 
       if (urlString.startsWith('/wiki/')) {
         try {
-          await import(`@/content/${urlString.replace(/^\/wiki\//, '').toLowerCase()}.mdx`);
+          await import(`@/content/${urlString.replace(/^\/wiki\/|\#.*$/g, '').toLowerCase()}.mdx`);
         } catch {
           return (
             <Link
